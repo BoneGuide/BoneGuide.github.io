@@ -1,5 +1,219 @@
 @import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Comfortaa:300,700|Overpass:400,900&display=swap');
 
+body, html {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  background: #0D0D0D;
+}
+
 nav {
   font-family: 'Comfortaa', sans-serif;
+  height: 90px;
+  width: 100vw;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+
+#inner-nav {
+  width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+#title {
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  line-height: 100px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  font-weight: 300;
+  font-size: 11px;
+}
+
+li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+li {
+  padding: 0 10px;
+  margin: 0 10px;
+  cursor: pointer;
+  line-height: 100px;
+  /* background: red; */
+}
+
+li a:hover {
+  color: #FFD750;
+}
+
+
+main {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: relative;
+}
+
+main a {
+  text-decoration: none;
+}
+
+.nav-tile {
+  color: #FFD750;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  width: 100%;
+  margin: 20px 0;
+  height: 130px;
+  line-height: 130px;
+  background: darkgrey;
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
+  transition: transform 0.1s cubic-bezier(0, 0.55, 0.45, 1), box-shadow 0.6s cubic-bezier(0, 0.55, 0.45, 1);
+  transform: scale(1);
+  /* border: 0; */
+  box-shadow: 0px 0px 0px 0px #FFD750 inset;
+  cursor: pointer;
+}
+
+.entity {
+  background: linear-gradient(0deg, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('https://vignette.wikia.nocookie.net/boneworks/images/6/62/Nullboyes.png') 0% 30%;
+}
+.gun {
+  background: linear-gradient(0deg, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('https://vignette.wikia.nocookie.net/boneworks/images/c/c4/M16_variants.png') 0% 30%;
+}
+.melee {
+  background: linear-gradient(0deg, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('https://vignette.wikia.nocookie.net/boneworks/images/5/58/Spiked_club.png') 0% 30%;
+}
+.prop {
+  background: linear-gradient(0deg, rgba(18, 18, 18, 0.8), rgba(18, 18, 18, 0.8)), url('https://vignette.wikia.nocookie.net/boneworks/images/e/e7/Crate.PNG') 0% 15%;
+}
+
+.nav-tile:hover {
+  transition: transform 0.1s cubic-bezier(0, 0.55, 0.45, 1), box-shadow 0.2s cubic-bezier(0, 0.55, 0.45, 1);
+  /* border: 20px solid #FFD750; */
+  box-shadow: 0px 0px 0px 2px #FFD750 inset;
+  transform: scale(1.02);
+}
+
+/* INFO TILE CSS */
+
+.info-tile {
+  position: relative;
+  box-sizing: border-box;
+  color: #FFD750;
+  font-size: 18px;
+  width: 100%;
+  margin: 20px 0;
+  height: 180px;
+  background: #121212;
+  /* border: 0; */
+  box-shadow: 0px 0px 0px 0px #FFD750 inset;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+}
+
+.info {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.info-name {
+  position: relative;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.2em;
+  z-index: 5;
+}
+
+.info-paragraph {
+  position: relative;
+  font-family: 'Overpass', sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  width: 600px;
+  margin: 10px 0;
+  z-index: 5;
+  line-height: 24px;
+}
+
+.info-location {
+  letter-spacing: 0.2em;
+  font-size: 18px;
+  font-family: 'Bebas Neue', sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+
+.identity {
+  left: 0;
+  top: 0;
+  position: relative;
+  height: 100%;
+  width: 250px;
+  overflow: hidden;
+}
+.cover-identity {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(18, 18, 18, 0) 32.85%, #121212 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.img-identity {
+  height: auto;
+  width: 350px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -35%);
+}
+
+.location {
+  right: 0;
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 350px;
+  overflow: hidden;
+}
+.cover-location {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  background: linear-gradient(90deg, #121212 12%, rgba(18, 18, 18, 0) 64.93%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+.img-location {
+  height: auto;
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
