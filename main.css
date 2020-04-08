@@ -225,7 +225,7 @@ main a {
   width: 100%;
   position: absolute;
   z-index: 2;
-  background: linear-gradient(90deg, #121212 12%, rgba(18, 18, 18, 0) 64.93%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(90deg, #121212 12%, rgba(18, 18, 18, 0) 64.93%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
 }
 .img-location {
   height: auto;
