@@ -4,34 +4,25 @@
     <meta charset="utf-8">
     <title>Home - The BoneGuide</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <!-- <meta http-equiv="refresh" content="2"> -->
   </head>
   <body>
     <nav>
       <div id="inner-nav">
-        <div id="title">THE BONEGUIDE</div>
-        <ul>
-          <li><a href="entities.html">ENTITIES</a></li>
-          <li>FIREARMS</li>
-          <li>MELEE</li>
-          <li>PROPS</li>
-        </ul>
+        <img id="title-center" src="imgs/boneguidelogo.svg" alt="boneguide logo"/>
       </div>
     </nav>
     <main>
-      <a href="entities.html"><div class="nav-tile entity">
-        <span>Entities</span>
-      </div></a>
-      <div class="nav-tile gun">
-        <span>Firearms</span>
-      </div>
-      <div class="nav-tile melee">
-        <span>Melee</span>
-      </div>
-      <div class="nav-tile prop">
-        <span>Props</span>
+      <div id="tiles">
+        <div onclick="goToLink('boneguide.html')" id="guide-tile"><img src="imgs/boneguide.svg"/></div>
+        <div onclick="goToLink('wiki.html')" id="wiki-tile"><img src="imgs/bonewiki.svg"/></div>
       </div>
     </main>
+
+    <div id="load"><img class="bounce" src="imgs/boneguidelogo.svg" alt="boneguide logo"/></div>
+
   </body>
+  <script src="main.js"></script>
 </html>

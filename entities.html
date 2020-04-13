@@ -10,16 +10,17 @@
   <body>
     <nav>
       <div id="inner-nav">
-        <div id="title">THE BONEGUIDE</div>
+        <!-- <div id="title">THE BONEGUIDE</div> -->
+        <img onclick="goToLink('index.html')" id="title" src="imgs/boneguidelogo.svg" alt="boneguide logo"/>
         <ul>
-          <li>ENTITIES</li>
-          <li>FIREARMS</li>
-          <li>MELEE</li>
-          <li>PROPS</li>
+          <li onclick="goToLink('entities.html')">ENTITIES</li>
+          <li onclick="goToLink('firearms.html')">FIREARMS</li>
+          <li onclick="goToLink('melee.html')">MELEE</li>
+          <li onclick="goToLink('props.html')">PROPS</li>
         </ul>
       </div>
     </nav>
-    <div id="tip">CLICK AN ITEM TO EXPAND (doesn't do anything yet)</div>
+    <div id="tip">CLICK AN ITEM TO EXPAND</div>
     <main>
       <div class="info-tile">
         <div class="identity">
@@ -38,11 +39,11 @@
       </div>
       <div class="info-tile">
         <div class="identity">
-          <img class="img-identity" src="imgs/voidnullbody.jpg" alt="a nullbody"/>
+          <img class="img-identity" src="imgs/corruptednullbody.jpg" alt="a nullbody"/>
           <div class="cover-identity"></div>
         </div>
         <div class="location">
-          <img class="img-location" src="imgs/voidnullbodylocation.jpg" alt="nullbody location"/>
+          <img class="img-location" src="imgs/corruptednullbodylocation.jpg" alt="nullbody location"/>
           <div class="cover-location"></div>
         </div>
         <div class="info">
@@ -78,21 +79,6 @@
         </div>
         <div class="info">
           <span class="info-name">Zombish</span>
-          <div class="info-paragraph">At the end of The Tower level, look outside your elevator, should be on top of the building to the left of the elevator (You can climb the bars behind the elevator)</div>
-          <div class="info-location">LOCATION</div>
-        </div>
-      </div>
-      <div class="info-tile">
-        <div class="identity">
-          <img class="img-identity" src="imgs/voidzombish.jpg" alt="a nullbody"/>
-          <div class="cover-identity"></div>
-        </div>
-        <div class="location">
-          <img class="img-location" src="imgs/voidzombishlocation.jpg" alt="nullbody location"/>
-          <div class="cover-location"></div>
-        </div>
-        <div class="info">
-          <span class="info-name">Void Zombish</span>
           <div class="info-paragraph">In Sewers, the Bonebox is located at the end of the hallway that the Nullrat Bonebox is at the beginning of.</div>
           <div class="info-location">LOCATION</div>
         </div>
@@ -107,7 +93,7 @@
           <div class="cover-location"></div>
         </div>
         <div class="info">
-          <span class="info-name">Immersed Zombish</span>
+          <span class="info-name">VR Zombish</span>
           <div class="info-paragraph">In Warehouse, the Bonebox is high up on the corner of the building that hovers above the Monomat. You can climb up the building to the left of the Monomat to get to it.</div>
           <div class="info-location">LOCATION</div>
         </div>
@@ -146,27 +132,27 @@
       </div>
       <div class="info-tile">
         <div class="identity">
-          <img class="img-identity" src="imgs/kingcrab.jpg" alt="a nullbody"/>
+          <img class="img-identity" src="imgs/kingcrablet.jpg" alt="a nullbody"/>
           <div class="cover-identity"></div>
         </div>
         <div class="location">
-          <img class="img-location" src="imgs/kingcrablocation.jpg" alt="nullbody location"/>
+          <img class="img-location" src="imgs/kingcrabletlocation.jpg" alt="nullbody location"/>
           <div class="cover-location"></div>
         </div>
         <div class="info">
           <span class="info-name">King Crablet</span>
-          <div class="info-paragraph">In Time Tower, after reaching the level with the Gravity Core, there are two square spaces in the wall behind where you enter. The Bonebox is in the left one when facing that wall.</div>
+          <div class="info-paragraph">In Time Tower, after reaching the level with the Gravity Core, there are two square spaces in the wall behind where you enter. The Bonebox is in the left one when facing that wall. You can surf a Gravity Orb using the Gravity Staff to get up there.</div>
           <div class="info-location">LOCATION</div>
         </div>
       </div>
 
       <div class="info-tile">
         <div class="identity">
-          <img class="img-identity" src="imgs/ford.jpg" alt="a nullbody"/>
+          <img class="img-identity" src="imgs/arthurford.jpg" alt="a nullbody"/>
           <div class="cover-identity"></div>
         </div>
         <div class="location">
-          <img class="img-location" src="imgs/fordlocation.jpg" alt="nullbody location"/>
+          <img class="img-location" src="imgs/arthurfordlocation.jpg" alt="nullbody location"/>
           <div class="cover-location"></div>
         </div>
         <div class="info">
@@ -185,8 +171,23 @@
           <div class="cover-location"></div>
         </div>
         <div class="info">
-          <span class="info-name">Arthur Ford Head</span>
+          <span class="info-name">Ford Head</span>
           <div class="info-paragraph">In Tower, on the top floor there will be a garden with giant balls surrounding it. Use them to jump to the center. You'll find the Bonebox on the corner of the roof of that area closest to the end of the level.</div>
+          <div class="info-location">LOCATION</div>
+        </div>
+      </div>
+      <div class="info-tile">
+        <div class="identity">
+          <img class="img-identity" src="imgs/vrjunkie.jpg" alt="a nullbody"/>
+          <div class="cover-identity"></div>
+        </div>
+        <div class="location">
+          <img class="img-location" src="imgs/vrjunkielocation.jpg" alt="nullbody location"/>
+          <div class="cover-location"></div>
+        </div>
+        <div class="info">
+          <span class="info-name">VR Junkie</span>
+          <div class="info-paragraph">At the end of The Tower level, look outside your elevator, should be on top of the building to the left of the elevator (You can climb the bars behind the elevator)</div>
           <div class="info-location">LOCATION</div>
         </div>
       </div>
@@ -238,8 +239,38 @@
       </div>
 
     </main>
+    <div id="overlay">
+      <div id="modal">
+        <img id="closemodal" src="imgs/x.svg" alt="leav modal plz"/>
+        <div class="modal-title">UNDEFINED</div>
+        <div class="modal-desc">undefined undefined undefined undefined undefined undefined</div>
+        <div id="modal-images">
+          <div class="img1"></div>
+          <div class="img2"></div>
+          <div class="img3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="load"><img class="bounce" src="imgs/boneguidelogo.svg" alt="boneguide logo"/></div>
+
   </body>
+  <script src="main.js"></script>
   <script type="text/javascript">
 
+    $('.info-tile').on("click", function() {
+      var name = $(this).find('.info-name').text();
+      var filename = name.replace(' ', '').replace('-', '').toLowerCase();
+      var desc = $(this).find('.info-paragraph').text();
+      $('#overlay').toggle();
+
+      $('.modal-title').text(name);
+      $('.modal-desc').text(desc);
+      $('.img1').css({"background": "url(imgs/"+filename+"location.jpg) center", "background-size": "cover"});
+      $('.img2').css({"background": "url(imgs/"+filename+".jpg) center", "background-size": "cover"});
+    });
+    $('#closemodal').on("click", function() {
+      $('#overlay').toggle();
+    })
   </script>
 </html>
