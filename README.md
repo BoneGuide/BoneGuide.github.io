@@ -1,2 +1,2 @@
-# boneguide.github.io
+# bonetome.github.io
 site
